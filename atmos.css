@@ -5,8 +5,8 @@
     position: relative;
     font-size: 1em;
     text-align: center;
-    margin: 1em;
-    width: 100%;
+    margin: 1em auto;
+    width: 90%;
 }
 
 .atmos-sphere *,
@@ -76,11 +76,11 @@
     opacity: 0;
 }
 
-.atmos-sphere .atmos-title.hover {
+.atmos-sphere .atmos-title.secondary {
     opacity: 0;
 }
 
-.atmos-sphere:hover .atmos-title.hover {
+.atmos-sphere:hover .atmos-title.secondary {
     opacity: 1;
 }
 

@@ -23,10 +23,9 @@ function atmos_sphere_shortcode( $atts ) {
             'top_text_secondary'         => '',
             'bottom_text'                => '',
             'bottom_text_secondary'      => '',
-            'border_color'                 => '#fff',
+            'border_color'               => '#fff',
             'icon'                       => '',
             'icon_second'                => true,
-            //'size'                       => 300,
         ),
         $atts,
         'atmos-sphere'
@@ -53,10 +52,6 @@ function atmos_sphere_shortcode( $atts ) {
     $output .= '</div>';
     $output .= '<style>';
     $output .= '#atmos-sphere-' . $id . '.atmos-sphere {';
-    //if ( $atts['size'] ) {
-        //$output .= '  width: ' . $atts['size'] . 'px;';
-        //$output .= '  height: ' . $atts['size'] . 'px;';
-    //}
     if ( $atts['border_color'] ) {
         $output .= '  border: ' . $atts['border_color'] . ' 1px solid;';
     }
