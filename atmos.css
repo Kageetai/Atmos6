@@ -1,0 +1,96 @@
+.atmos-sphere {
+    color: white;
+    border-radius: 100%;
+    border: 3px solid white;
+    position: relative;
+    font-size: 1em;
+    text-align: center;
+    margin: 1em;
+    width: 100%;
+}
+
+.atmos-sphere *,
+.atmos-sphere:hover * {
+    position: absolute;
+    transition: all .5s;
+}
+
+.atmos-sphere:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 100%;
+    transform: translate(0, 0);
+    transition: all .5s;
+}
+
+.atmos-sphere:hover:before {
+    height: 110%;
+    width: 110%;
+    transform: translate(-5%, -5%);
+    transition: all .5s;
+}
+
+.atmos-sphere .atmos-background {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.atmos-sphere:hover .atmos-background {
+    filter: invert(100%);
+}
+
+.atmos-sphere .atmos-title {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    width: 100%;
+    line-height: 1;
+    margin: 0;
+}
+
+.atmos-sphere:hover .atmos-title {
+    color: black;
+}
+
+.atmos-sphere .atmos-title.top {
+    top: 10%;
+}
+
+.atmos-sphere .atmos-title.bottom {
+    bottom: 10%;
+}
+
+.atmos-sphere .atmos-title {
+    opacity: 1;
+}
+
+.atmos-sphere:hover .atmos-title {
+    opacity: 0;
+}
+
+.atmos-sphere .atmos-title.hover {
+    opacity: 0;
+}
+
+.atmos-sphere:hover .atmos-title.hover {
+    opacity: 1;
+}
+
+.atmos-sphere .atmos-icon {
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    height: 10%;
+}
+
+.atmos-sphere:hover .atmos-icon {
+    opacity: 0;
+}
