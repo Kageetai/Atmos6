@@ -51,14 +51,12 @@ function atmos_sphere_shortcode( $atts ) {
     }
     $output .= '</div>';
     $output .= '<style>';
-    $output .= '#atmos-sphere-' . $id . '.atmos-sphere {';
     if ( $atts['border_color'] ) {
-        $output .= '  border: ' . $atts['border_color'] . ' 1px solid;';
-    }
-    $output .= '}';
-    if ( $atts['border_color'] ) {
+        $output .= '#atmos-sphere-' . $id . '.atmos-sphere {';
+        $output .= '  border: 3px solid ' . $atts['border_color'] . ';';
+        $output .= '}';
         $output .= '#atmos-sphere-' . $id . '.atmos-sphere:before {';
-        $output .= '  border: ' . $atts['border_color'] . '1px solid;';
+        $output .= '  border: 1px solid ' . $atts['border_color'] . ';';
         $output .= '}';
     }
     if ( $atts['background_image'] ) {
