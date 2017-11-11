@@ -96,8 +96,25 @@
     bottom: 0;
     width: 10%;
     height: 10%;
+    background-color: white;
+    border-radius: 100%;
+    color: black;
+}
+
+.atmos-sphere .atmos-icon > i {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .atmos-sphere:hover .atmos-icon {
     opacity: 0;
+}
+
+.atmos-sphere .atmos-icon.secondary {
+    opacity: 0;
+}
+
+.atmos-sphere:hover .atmos-icon.secondary {
+    opacity: 1;
 }

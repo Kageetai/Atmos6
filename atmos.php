@@ -25,7 +25,7 @@ function atmos_sphere_shortcode( $atts ) {
             'bottom_text_secondary'      => '',
             'border_color'               => '#fff',
             'icon'                       => '',
-            'icon_second'                => true,
+            'icon_secondary'                => false,
         ),
         $atts,
         'atmos-sphere'
@@ -47,7 +47,9 @@ function atmos_sphere_shortcode( $atts ) {
     $output .= '  <h4 class="atmos-title bottom">' . $atts['bottom_text'] . '</h4>';
     $output .= '  <h4 class="atmos-title bottom secondary">' . $atts['bottom_text_secondary'] . '</h4>';
     if ( $atts['icon'] ) {
-        $output .= '  <i class="atmos-icon fa ' . $atts['icon'] . '" aria-hidden="true"></i>';
+        $output .= '  <div class="atmos-icon ' . ($atts['icon_secondary'] ? 'secondary' : '') . '">';
+        $output .= '    <i class="fa ' . $atts['icon'] . '" aria-hidden="true"></i>';
+        $output .= '  </div>';
     }
     $output .= '</div>';
     $output .= '<style>';
@@ -64,7 +66,7 @@ function atmos_sphere_shortcode( $atts ) {
         $output .= '  background-image: url('.$atts['background_image'].');';
         $output .= '}';
     }
-    if ( $atts['background_image'] ) {
+    if ( $atts['background_image_secondary'] ) {
         $output .= '#atmos-sphere-' . $id . '.atmos-sphere .atmos-background .secondary {';
         $output .= '  background-image: url('.$atts['background_image'].');';
         $output .= '}';
