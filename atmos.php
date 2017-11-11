@@ -67,8 +67,16 @@ function atmos_sphere_shortcode( $atts ) {
         $output .= '}';
     }
     if ( $atts['background_image_secondary'] ) {
-        $output .= '#atmos-sphere-' . $id . '.atmos-sphere .atmos-background .secondary {';
-        $output .= '  background-image: url('.$atts['background_image'].');';
+        $output .= '#atmos-sphere-' . $id . '.atmos-sphere:hover .atmos-background {';
+        $output .= '  opacity: 0;';
+        $output .= '}';
+        $output .= '#atmos-sphere-' . $id . '.atmos-sphere .atmos-background.secondary {';
+        $output .= '  background-image: url('.$atts['background_image_secondary'].');';
+        $output .= '  opacity: 0;';
+        $output .= '}';
+        $output .= '#atmos-sphere-' . $id . '.atmos-sphere:hover .atmos-background.secondary {';
+        $output .= '  opacity: 1;';
+        $output .= '  filter: none;';
         $output .= '}';
     }
     $output .= '</style>';
