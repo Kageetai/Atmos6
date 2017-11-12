@@ -5,7 +5,7 @@
 Shortcode to insert a configurable sphere with background image(s) and
 hover effects
 
-*Supported Attributes*
+**Supported Attributes**
 
 - `link` full URL to go to on click
 - `background_image` full URL of first background image displayed when
