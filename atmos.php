@@ -17,6 +17,7 @@ function atmos_sphere_shortcode( $atts ) {
     // Attributes
     $atts = shortcode_atts(
         array(
+            'link'           => '',
             'background_image'           => '',
             'background_image_secondary' => '',
             'top_text'                   => '',
@@ -37,7 +38,7 @@ function atmos_sphere_shortcode( $atts ) {
 
     $id     = rand( 1, 1000 );
     $output = '';
-    $output .= '<div class="atmos-sphere" id="atmos-sphere-' . $id . '">';
+    $output .= '<div class="atmos-sphere" id="atmos-sphere-' . $id . '" '. ($atts['link'] ? ('data-href="' . $atts['link'] . '"') : '') . '>';
     $output .= '  <div class="atmos-background">&nbsp;</div>';
     if ( $atts['background_image_secondary'] ) {
         $output .= '  <div class="atmos-background secondary">&nbsp;</div>';
