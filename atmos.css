@@ -11,13 +11,13 @@
     transition: background-color .5s;
 }
 
-.atmos-sphere:hover {
+.atmos-sphere.active {
     background-color: white;
     transition: background-color .5s;
 }
 
 .atmos-sphere *,
-.atmos-sphere:hover * {
+.atmos-sphere.active * {
     position: absolute;
     transition: all .5s;
 }
@@ -33,7 +33,7 @@
     transition: all .5s;
 }
 
-.atmos-sphere:hover:before {
+.atmos-sphere.active:before {
     height: 110%;
     width: 110%;
     transform: translate(-5%, -5%);
@@ -51,7 +51,7 @@
     opacity: 1;
 }
 
-.atmos-sphere:hover .atmos-background {
+.atmos-sphere.active .atmos-background {
     filter: invert(100%);
 }
 
@@ -64,7 +64,7 @@
     margin: 0;
 }
 
-.atmos-sphere:hover .atmos-title {
+.atmos-sphere.active .atmos-title {
     color: black;
 }
 
@@ -80,7 +80,7 @@
     opacity: 1;
 }
 
-.atmos-sphere:hover .atmos-title {
+.atmos-sphere.active .atmos-title {
     opacity: 0;
 }
 
@@ -88,7 +88,7 @@
     opacity: 0;
 }
 
-.atmos-sphere:hover .atmos-title.secondary {
+.atmos-sphere.active .atmos-title.secondary {
     opacity: 1;
 }
 
@@ -108,7 +108,7 @@
     transform: translate(-50%, -50%);
 }
 
-.atmos-sphere:hover .atmos-icon {
+.atmos-sphere.active .atmos-icon {
     opacity: 0;
 }
 
@@ -116,6 +116,6 @@
     opacity: 0;
 }
 
-.atmos-sphere:hover .atmos-icon.secondary {
+.atmos-sphere.active .atmos-icon.secondary {
     opacity: 1;
 }
