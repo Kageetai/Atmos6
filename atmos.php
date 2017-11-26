@@ -48,7 +48,7 @@ function atmos_sphere_shortcode( $atts ) {
     $output .= '  <h4 class="atmos-title bottom">' . $atts['bottom_text'] . '</h4>';
     $output .= '  <h4 class="atmos-title bottom secondary">' . $atts['bottom_text_secondary'] . '</h4>';
     if ( $atts['icon'] ) {
-        $output .= '  <div class="atmos-icon ' . ($atts['icon_secondary'] ? 'secondary' : '') . '">';
+        $output .= '  <div class="atmos-icon ' . ($atts['icon_secondary'] == 'true' ? 'secondary' : '') . '">';
         $output .= '    <i class="fa ' . $atts['icon'] . '" aria-hidden="true"></i>';
         $output .= '  </div>';
     }
