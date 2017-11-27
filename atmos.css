@@ -37,7 +37,7 @@
 .atmos-sphere.active:before {
     height: 110%;
     width: 110%;
-    transform: translate(-5%, -5%);
+    transform: translate(-4.75%, -4.75%);
     transition: all .5s;
 }
 
